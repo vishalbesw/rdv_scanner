@@ -29,7 +29,7 @@ class GeminiCaptchaSolver:
 
                 # Priorité des modèles configurable via .env pour fallback
                 # Priorité demandée par l'utilisateur
-                default_priority = 'gemini-2.5-flash,gemini-2.0-flash-exp,gemini-2.0-flash,gemini-2.5-flash-lite,gemini-2.0-flash-lite,gemini-2.5-pro'
+                default_priority = 'gemini-2.5-flash,gemini-2.0-flash-exp,gemini-2.0-flash,gemini-3.5-flash-lite,gemini-2.0-flash-lite,gemini-2.5-pro'
                 priority_env = os.getenv('GEMINI_MODEL_PRIORITY', default_priority)
                 models = [m.strip() for m in priority_env.split(',') if m.strip()]
 
